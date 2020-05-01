@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <div id="app-container">
+    <form action="/" method="post">
+        <input id="search-input" name="city" type="text" placeholder="Search for your city...">
+        <input id="search-button" type="submit" value="Search">
+    </form>
+    <% if (locals.weather) { %>
+      <% try { %>
+        <style>
+          #app-container {
+            top: 40%;
+          }
+        </style>
+        <div class="weather-card">
+          <div class="weather-card-name"><%= weather.name + ', ' + weather.sys.country %></div>
+          <div class="weather-card-temp"><%= parseInt((((weather.main.temp - 32)*5)/9)) %></div>
+          <img class="weather-card-img" src="http://openweathermap.org/img/w/<%= weather.weather[0].icon %>.png">
+        </div>
+      <% } catch (err) { %>
+        <p style="font-size: 1rem; text-align: center;" ><%= 'Could not find a location that matched your search query' %></p>
+          <style>
+            .weather-card {
+              border: none;
+              background: none;
+            }
+          </style>
+      <% } %>
+    <% } %>
+  </div>
+  </body>
+
+</html>
