@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const apiKey = '' // insert openweathermap.org api key here
+const apiKey = 'f20c1c67a39a35591663df5d9e99ad60' // insert openweathermap.org api key here
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
