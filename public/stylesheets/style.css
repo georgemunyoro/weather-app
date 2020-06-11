@@ -53,8 +53,8 @@ html {
   }
 
   .weather-card {
-    width: 87% !important;
-    margin-left: 0 !important;
+    width: 87%;
+    margin-left: 0;
   }
 }
 
