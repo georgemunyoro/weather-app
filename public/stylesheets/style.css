@@ -17,7 +17,7 @@ html {
 }
 
 #app-container:hover {
-  box-shadow: #333333;
+  box-shadow: #333;
 }
 
 #search-button {
@@ -55,7 +55,6 @@ html {
   .weather-card {
     width: 87% !important;
     margin-left: 0 !important;
-
   }
 }
 
