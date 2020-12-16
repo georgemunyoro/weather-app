@@ -24,8 +24,8 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 app.post("/", (req, res) => {
-  let city = req.body.city;
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+  const city = req.body.city;
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
   request(url, (err, response, body) => {
     if (err) {
       res.render("index", {weather: null, error: "Error, please try again"});
