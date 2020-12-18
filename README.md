@@ -6,4 +6,4 @@ An application that returns the weather data for a given city or country
 
 ![image text](https://i.ibb.co/LJ0VsJ2/2020-06-20-035124-2390x768-scrot.png)
  
-The application is built with Javascript, CSS and HTML5.
+The application is built with Node, JS, CSS and HTML5.
